@@ -73,16 +73,16 @@ let isOn = false;
 window.speechSynthesis.onvoiceschanged = function() {
 text = new SpeechSynthesisUtterance();
 voices = window.speechSynthesis.getVoices();
-console.log(voices);
+//console.log(voices);
 text.voiceURI = "Google português do Brasil"; //discovered after dumping getVoices()
 text.lang = "pt-br";
 text.localService = true;
 if(voices.lenght === 21){
   text.voice = voices[14]; //index to the voiceURI. This index number is not static.
-  console.log(voices);
+ // console.log(voices);
 } else if (voices.lenght === 26){
   text.voice = voices[17]; //index to the voiceURI. This index number is not static.
-  console.log(voices);
+ // console.log(voices);
 }
 }
 
