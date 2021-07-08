@@ -1,4 +1,4 @@
-# Bem vindo ao protótipo de MV do Colorful_Help!
+# Bem vindo ao MVP do Colorful_Help!
 Esse protótipo tem como objetivo comprovar o conceito
 de programa capaz de reconhecer objetos e responder por voz, sendo
 comandado por um botão. Protótipos futuros serão mais acessíveis, para
