@@ -6,7 +6,6 @@ const enableWebcamButton = document.getElementById('webcamButton');
 $(document).ready(function(){
   startSpeaking("Bem vindo ao Colorful Help!! Auxiliando pessoas cegas a perceber o mundo de forma independente.");
   startSpeaking("Aperte a tecla espaço para começar!!");
-  console.log("iniciou")
 });
 
 // Check if webcam access is supported.
@@ -92,29 +91,12 @@ text.text = line;
 speechSynthesis.speak(text);
 }
 
-/*
-$(function() {
-  var xCoord, yCoord;
-  $(document).on("mousemove", function(event) {
-  xCoord = event.pageX;
-  yCoord = event.pageY;
-  console.log("x: "+ xCoord+ ", y: "+ yCoord);
-  } );
-  } );
-
-*/
-
-
 document.addEventListener('keypress', function(e){
   if(e.which === 32){
     enableCam();
     isOn = true;
-    console.log("rodou aqui")
   }
 }, false);
-
-
-
 
 function predictWebcam() {
   // Now let's start classifying a frame in the stream.
@@ -157,7 +139,6 @@ function predictWebcam() {
 
       }
     }
-    
   
     // Call this function again to keep predicting when the browser is ready.
     if(isOn === true){
