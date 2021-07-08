@@ -147,8 +147,8 @@ function predictWebcam() {
       console.log(result.length)
       let precision = result[1].split(' ');
       let is = "";
-      console.log(result)
-      console.log(result[0])
+      //console.log(result)
+      //console.log(result[0])
       switch(result[0]){
         case "person ":{
           is = "uma";
@@ -257,7 +257,7 @@ function predictWebcam() {
         }
 
       }
-      console.log(result)
+      //console.log(result)
 
       if (result.length > 0){
         startSpeaking(`Oie. Eu encontrei ${is} ${result}... Tenho ${precision[2]} de certeza nessa predição.`)
