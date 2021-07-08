@@ -4,7 +4,7 @@ const demosSection = document.getElementById('demos');
 const enableWebcamButton = document.getElementById('webcamButton');
 
 $(document).ready(function(){
-  startSpeaking("Bem vindo ao Colorful Help!! Auxiliando pessoas cegas a perceber o mundo de forma independente.");
+  startSpeaking("Bem vindo ao Cólorful Help!! Auxiliando pessoas cegas a perceber o mundo de forma independente.");
   startSpeaking("Aperte a tecla espaço para começar!!");
 });
 
