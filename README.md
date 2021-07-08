@@ -4,6 +4,9 @@ de programa capaz de reconhecer objetos e responder por voz, sendo
 comandado por um botão. Protótipos futuros serão mais acessíveis, para
 que pessoas com deficiência visual possam testá-los.
 
+#Rota
+No link desse arquivo, preenhca com /CH2_prototype.html
+
 #Propósitos
 Testar fluxograma de funcionamento;
 Avaliar bugs e fazer validações onde der;
