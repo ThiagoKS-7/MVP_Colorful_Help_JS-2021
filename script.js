@@ -120,8 +120,8 @@ speechSynthesis.speak(text);
           
           myRecognition.addEventListener('result', function(evt){
               var resultSpeak = evt.results[prediction][0].transcript;
-              //console.log(evt.results);
-              //console.log(resultSpeak);
+              console.log(evt.results);
+              console.log(resultSpeak);
               if(listen === true) {
                 switch(resultSpeak.toLowerCase()){
                   case 'o que é isso?':
