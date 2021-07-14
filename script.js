@@ -104,8 +104,6 @@ speechSynthesis.speak(text);
 
           var myRecognition = new webkitSpeechRecognition();
           myRecognition.lang = 'pt-BR';
-          myRecognition.continuous = true;
-
           document.addEventListener('keypress', function(e){
             if(e.which === 32){
               //circular com try catch
