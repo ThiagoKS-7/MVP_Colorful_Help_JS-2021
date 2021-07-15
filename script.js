@@ -40,6 +40,7 @@ function enableCam() {
       video.srcObject = stream;
       video.addEventListener('loadeddata', predictWebcam);
     });
+    enabled = true;
   }
 
 // Pretend model has loaded so we can try out the webcam code.
@@ -65,24 +66,25 @@ cocoSsd.load().then(function (loadedModel) {
 var children = [];
 var text = '';
 var voices = [];
+var result = document.getElementById('result');
 let count = 0;
 let isOn = false;
-
+let enabled = false;
 
 //pegar o btn por ID e fazer a função de fala por ele
 window.speechSynthesis.onvoiceschanged = function() {
 text = new SpeechSynthesisUtterance();
 voices = window.speechSynthesis.getVoices();
-//console.log(voices);
+console.log(voices);
 text.voiceURI = "Google português do Brasil"; //discovered after dumping getVoices()
 text.lang = "pt-br";
 text.localService = true;
 if(voices.lenght === 21){
   text.voice = voices[14]; //index to the voiceURI. This index number is not static.
- // console.log(voices);
+ console.log(voices);
 } else if (voices.lenght === 26){
   text.voice = voices[17]; //index to the voiceURI. This index number is not static.
- // console.log(voices);
+ console.log(voices);
 }
 }
 
@@ -91,12 +93,94 @@ text.text = line;
 speechSynthesis.speak(text);
 }
 
-document.addEventListener('keypress', function(e){
-  if(e.which === 32){
-    enableCam();
-    isOn = true;
-  }
-}, false);
+/***********************************
+*       RECONHECIMENTO DE VOZ
+************************************
+*/
+
+        if('webkitSpeechRecognition' in window) {
+
+          var myRecognition = new webkitSpeechRecognition();
+          myRecognition.lang = 'pt-BR';
+
+          document.addEventListener('keypress', function(e){
+            if(e.which === 32){
+              try{
+                myRecognition.start();
+                result.innerHTML = "Estou ouvindo";
+              } catch(error){
+                alert('erro: ' + error.message);
+              }
+            }
+          }, false);
+          
+          /*
+          speakBtn.addEventListener('click', function(){
+              console.log('teste')
+              try{
+                  myRecognition.start();
+                  resultSpeaker.innerHTML = "Estou ouvindo";
+
+              } catch(error){
+                  alert('erro: ' + error.message);
+              }
+          }, false);
+          */
+          myRecognition.addEventListener('result', function(evt){
+              var resultSpeak = evt.results[0][0].transcript;
+              console.log(evt.results);
+              console.log(resultSpeak);
+
+              switch(resultSpeak.toLowerCase()){
+                  case 'o que é isso?':
+                    if(enabled === false){
+                      enableCam();
+                      isOn = true;  
+                    }
+                      console.log('chegou aqui')
+                  break;
+
+                  case 'o que isso?':
+                    if(enabled === false){
+                      enableCam();
+                      isOn = true;  
+                    }
+                      console.log('chegou aqui')
+                  break;
+
+                  case 'que isso?':
+                    if(enabled === false){
+                      enableCam();
+                      isOn = true;  
+                    }
+                      console.log('chegou aqui')
+                  break;
+
+                  default:
+                    startSpeaking('Desculpe, mas não entendi');
+                  break;
+
+              }
+          })
+
+          myRecognition.addEventListener('error', function(){
+              resultSpeaker.innerHTML = 'Desculpe ,mas não entendi o que você falou, tente novamente'
+          },false);
+      }else{
+          resultSpeaker.innerHTML = 'Seu navegador não me suporta T-T';
+      }
+
+
+      /*________________________________________________________________________________________________*/
+
+
+
+
+
+
+
+
+
 
 function predictWebcam() {
   // Now let's start classifying a frame in the stream.
@@ -262,6 +346,7 @@ function predictWebcam() {
       if (result.length > 0){
         startSpeaking(`Oie. Eu encontrei ${is} ${result}... Tenho ${precision[2]} de certeza nessa predição.`)
         isOn = false;
+        enabled = false;
       }
       else if(result.length <= 0){
         startSpeaking("Desculpe, mas não encontrei nada aqui.")
