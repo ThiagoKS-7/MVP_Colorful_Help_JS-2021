@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>MVP Colorful Help 2</title>
+    <meta charset="utf-8">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>  
+  <body>
+    <div class="title">
+      <h1>MVP Colorful Help 2 - Predições</h1>
+    </div>
+    <div class="content">
+      <div class="img-box">
+        <img  class="camera-img" src="./src/assets/camera-color.png" alt="camera">
+      </div>
+      <section id="demos" class="invisible">
+        <div id="liveView" class="camView">
+          <button  id="webcamButton"></button>
+          <video id="webcam" autoplay width="640" height="480"></video>
+          <span id="result"></span>
+        </div>
+      </section>
+    </div>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
+ 
+  </body>
+</html>

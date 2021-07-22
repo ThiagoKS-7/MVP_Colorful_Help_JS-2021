@@ -59,6 +59,7 @@ var model = undefined;
 cocoSsd.load().then(function (loadedModel) {
   model = loadedModel;
   // Show demo section now model is ready to use.
+  demosSection.classList.remove('camera-img');
   demosSection.classList.remove('invisible');
 });
 

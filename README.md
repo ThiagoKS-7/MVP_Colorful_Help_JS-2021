@@ -5,7 +5,7 @@ comandado por um botão. Protótipos futuros serão mais acessíveis, para
 que pessoas com deficiência visual possam testá-los.
 
 # Rota
-No link desse arquivo, preencha com /CH2_prototype.html
+No link desse arquivo, preencha com /CH2_styled-prototype.html
 
 # Propósitos
 Testar fluxograma de funcionamento;
