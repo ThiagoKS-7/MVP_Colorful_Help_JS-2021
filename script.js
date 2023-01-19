@@ -3,10 +3,13 @@ const liveView = document.getElementById('liveView');
 const demosSection = document.getElementById('demos');
 const enableWebcamButton = document.getElementById('webcamButton');
 
-$(document).ready(function(){
-  startSpeaking("Bem vindo ao Cólorful Help!! Auxiliando pessoas cegas a perceber o mundo de forma independente.");
-  startSpeaking("Aperte a tecla espaço para começar!!");
-});
+
+// $(document).on("load", function(){
+//   alert("teste");
+//     startSpeaking("Aperte a tecla espaço para começar!!");
+// });
+window.onload = () => { alert("Está carregado!") } 
+document.onload = () => { alert("Está carregado! 2") } 
 
 // Check if webcam access is supported.
 function getUserMediaSupported() {
