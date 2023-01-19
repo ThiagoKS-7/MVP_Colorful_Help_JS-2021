@@ -6,6 +6,12 @@
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css">    
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    !-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript" defer></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd" defer></script>
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
   </head>  
   <body>
       <h1>MVP Colorful Help 2 - Predições</h1>
@@ -18,14 +24,6 @@
           <video id="webcam" autoplay width="640" height="480"></video>
           <span id="result"></span>
         </div>
-      </section>
-
-    <!-- Import TensorFlow.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
-    <!-- Load the coco-ssd model to use to recognize things in images -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
-    <!-- Import the page's JavaScript to do some stuff -->
-    <script src="script.js" defer></script>
- 
+      </section> 
   </body>
 </html>
