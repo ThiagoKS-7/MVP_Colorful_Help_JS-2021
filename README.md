@@ -1,11 +1,13 @@
 # Bem vindo ao MVP do Colorful_Help!
+![image](https://user-images.githubusercontent.com/83460816/213361036-e945bc9b-af58-46f1-ae8d-84557bd6b031.png)
+
 Esse protótipo tem como objetivo comprovar o conceito
 de um programa capaz de reconhecer objetos e responder por voz, sendo
 comandado por um botão. Protótipos futuros serão mais acessíveis, para
 que pessoas com deficiência visual possam testá-los.
 
-# Rota
-No link desse arquivo, preencha com /CH2_styled-prototype.html
+[Clique aqui para acessar o protótipo](https://thiagoks-7.github.io/MVP_Colorful_Help_JS//CH2_styled-prototype.html) e
+aperte espaço para testar!
 
 # Propósitos
 Testar fluxograma de funcionamento;
