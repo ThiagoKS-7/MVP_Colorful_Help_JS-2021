@@ -3,12 +3,7 @@ const liveView = document.getElementById('liveView');
 const demosSection = document.getElementById('demos');
 const enableWebcamButton = document.getElementById('webcamButton');
 
-// $(document).on("load", function(){
-//   alert("teste");
-//     startSpeaking("Aperte a tecla espaço para começar!!");
-// });
-window.onload = () => { alert("Está carregado!") } 
-document.onload = () => { alert("Está carregado! 2") } 
+window.onload = () => {  startSpeaking("Aperte a tecla espaço para começar!!"); } 
 // Check if webcam access is supported.
 function getUserMediaSupported() {
     return !!(navigator.mediaDevices &&
