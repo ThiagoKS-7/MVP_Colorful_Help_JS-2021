@@ -3,8 +3,9 @@ const liveView = document.getElementById('liveView');
 const demosSection = document.getElementById('demos');
 const enableWebcamButton = document.getElementById('webcamButton');
 
-$(document).ready(function(){
-  startSpeaking("Aperte a tecla espaço para começar!!");
+$(window).on("load", function(){
+  alert("teste");
+    startSpeaking("Aperte a tecla espaço para começar!!");
 });
 
 // Check if webcam access is supported.
