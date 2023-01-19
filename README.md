@@ -4,8 +4,7 @@ de um programa capaz de reconhecer objetos e responder por voz, sendo
 comandado por um botão. Protótipos futuros serão mais acessíveis, para
 que pessoas com deficiência visual possam testá-los.
 
-# Rota
-No link desse arquivo, preencha com /CH2_styled-prototype.html
+[Clique aqui para acessar o protótipo](https://thiagoks-7.github.io/MVP_Colorful_Help_JS//CH2_styled-prototype.html)
 
 # Propósitos
 Testar fluxograma de funcionamento;
